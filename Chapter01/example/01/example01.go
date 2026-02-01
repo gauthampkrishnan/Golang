@@ -1,0 +1,17 @@
+package main
+
+import (
+	"fmt"
+	"os"
+)
+
+func main() {
+	var s, sep string
+	for i := 0; i < len(os.Args); i++ {
+		s = s + sep + os.Args[i]
+		sep = "\n"
+	}
+	fmt.Println(s)
+}
+
+// go run example01.go 1 2 3
